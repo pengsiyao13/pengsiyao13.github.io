@@ -2,9 +2,439 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+				<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" 
+  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+			<title></title>
+	<style>
+		.box1{
+			width: 100%;
+			height: 28px;
+			background-color:#f2f2f2;
+			position: relative;
+		}
+		.box2{
+			width:1240px;
+			height: 28px;
+			margin: auto;
+			background-color: #f2f2f2;
+			position:  relative;
+		}
+		li{
+			list-style: none;
+			text-align: center;
+			
+		}
+		 a{
+			text-decoration: none;
+			
+		}
+		.box2 a{
+			color:  darkgrey ;
+		}
+		.box2 li{
+			display: inline-block;
+			margin-left: 26px;
+			text-emphasis-position: inherit;
+			text-align: center;
+		}
+		.box2 a:hover{
+			color: red;
+		}
+		.box3{
+			width: 1240px;
+			height: 110px;
+			background-color:;
+			margin: auto;
+			
+			
+			
+		}
+		.box4{
+			height: 50px;
+			width: 323px;
+			padding-top: 25px;
+			float: left;
+			
+			
+			
+		}
+		.box5{
+			height: 40px;
+			width: 600px;
+			background-color: red;
+			margin-left: 50px;
+			float:left;
+			margin-top: 25px;
+		}
+		.box5 input{
+			width: 500px;
+			height: 35px;
+			margin-top: 2px;
+			margin-left: 2px;
+		}
+		.box5 span{
+			color: #F2F2F2;
+			font-size: 20px;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			margin-left: 20px;
+		}
+		.box6{
+			width: 550px;
+			height: 20px;
+			margin-left: 377px;
+			
+		}
+		.box6 li{
+			display: inline-block;
+			margin-top: 4px;
+			
+			
+		}
+		.box6 a{
+			color: #A9A9A9;
+			text-decoration: none;
+		}
+		.box6 a:hover{
+			color: red;
+		}
+		.box7{
+			float: right;
+			margin-top: -20px;
+			padding: 0;
+			
+		}
+		.box8{
+			width: 1240px;
+			height: 50px;
+			border-top:1px solid;
+			border-color: #A9A9A9;
+			background-color:;
+			float: left;
+			margin-top: 14px;
+			
+			
+		}
+		.box9{
+			width: 1240px;
+			height: 40px;
+			border: 2px solid;
+			border-color: #A9A9A9;
+			
+			overflow:  hidden;
+			margin: auto;
+			margin-top: 2px;
+			
+		}
+		.box10{
+			width: 1240px;
+			height: 40px;
+			overflow: hidden;
+			margin: auto;
+			margin-top: 20px;
+			border: 2px solid;
+			border-color: #A9A9A9;
+		}
+		.box8 a{
+			color: #A9A9A9;
+			
+			
+			
+		}
+		.box8 a:hover{
+			color: red;
+		}
+		.box11 input{
+			width: 160px;
+			height: 20px;
+			color:  #A9A9A9;
+			font-size: 13px;
+			border: 1px solid   #A9A9A9;
+			
+		}
+		.a{
+			width: 25px;
+			height: 19px;
+			margin:-4px;
+			border: 1px solid;
+			border-color: #A9A9A9;
+			display: inline-block;
+		}
+			
+		.box11 i{
+			color: #A9A9A9;
+			padding: 0;
+			margin: -13px;
+		}
+		.box11{
+			margin-top: 15px;
+		}
+		.b{
+			float: right;
+			margin-top: -20px;
+			color: #A9A9A9;
+		}
+		.c{
+			width: 120px;
+			height: 40px;
+			background-color:  whitesmoke;
+			float: left;
+		}
+		.d{
+			color: #A9A9A9;
+			width: 40px;
+			height: 20px;
+			float: left;
+			margin-top: 10px;
+			margin-left: 10px;
+			font-size: 13px;
+			
+			
+		}
+		.e{
+			width: 1100px;
+			height: 40px;
+			background-color: ;
+			
+			float: left;
+			
+		
+		}
+		.e li{
+			display: inline-block;
+			margin-left: 30px;
+			font-size: 13px;
+		}
+		.e a{
+			color: #A9A9A9;
+		}
+		.e a:hover{
+			color: red;
+			text-decoration: none;
+		}
+		.e i{
+			
+		}
+		.box10 img{
+			margin-top: -7px;
+		}
+		.box12{
+			width: 80%;
+			margin: auto;
+			height:  auto;
+			background-color: ;
+			display: flex;
+			flex-basis: 100%;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+		
+			
+			
+			
+			
+		}
+		.box13{
+			width:  300px;
+			height:  auto;
+			flex-basis: 100%;
+			background-color:;
+			margin: 30px;
+			flex-direction: column;
+			border: 1px black solid;
+			flex-wrap:nowrap;
+			display: flex;
+			
+		}
+		.box13:hover{
+			border: 2px solid red;
+		}
+		@media (max-width: 800px) {
+			.box12{
+				flex-wrap: wrap;
+			}
+			.box13{
+				flex-direction: row;
+				flex-wrap:nowrap;
+				justify-content: space-between;
+				
+			}
+			.f{
+				display: ;
+			}
+			.g{
+				display: inline-block ;
+			}
+			
+		}
+		
+		.f{
+			width: 300px;
+			height: 300px;
+			background-color:;
+			display: inline-block;
+		}
+		.g{
+			width: 300px;
+			height: auto;
+			background-color:;
+			display: inline-block;
+			margin-top: 5px;
+		}
+		span{
+			color: red;
+			font-size: 18px;
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 	</head>
 	<body>
+	<div class="box1">
+		<div class="box2">
+			<li><a href="#" ><img src="js/img/搜狗截图20191113222734.png" />天猫首页</a></li>
+			<li><a>喵，欢迎来天猫</a></li>
+			<li><a href="#" >请登录</a></li>
+			<li><a href="#" >免费注册</a></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li><a href="#" >我的淘宝</a></li>
+			<li><a href="#" ><img src="js/img/搜狗截图20191113222809.png" />购物车</a></li>
+			<li><a href="#" >收藏夹</a></li>
+			
+			<li><a href="#" ><img src="js/img/搜狗截图20191113222919.png" />手机版</a></li>
+			<li><a href="#" >淘宝网</a></li>
+			<li><a href="#" >商家支持</a></li>
+			<li><a><img src="js/img/搜狗截图20191113223014.png" />网站导航</a></li>
+		</div>
+	</div>
+	<div class="box3">
+		<div class="box4">
+			<img src="js/img/搜狗截图20191113222621.png" />
+		</div>
+		<div class="box5">
+			<input type="text"  value="汉服 女装"/>
+			<span>搜索</span>
+		</div>
+		<div class="box6">
+			<li><a href="#">女装秋装&nbsp;|</a></li>
+			<li><a href="#">汉服女装襦裙&nbsp;|</a></li>
+			<li><a href="#">太平鸟女装&nbsp;|</a></li>
+			<li><a href="#">大码女装&nbsp;|</a></li>
+			<li><a href="#">森系女装&nbsp;|</a></li>
+			<li><a href="#">汉服女装古装&nbsp;|</a></li>
+			<li><a href="#">改良汉服&nbsp;</a></li>
+		</div>
 		
+		<div class="box7">
+			<img src="js/img/TB1P7Y4j4D1gK0jSZFyXXciOVXa-380-160.png" width="180px"  height="90px"/>
+	</div>
+	<div class="box8">
+		<div class="box11">
+		<a href="#">全部></a>
+		<input type="text"  value="汉服  女装" />
+		<div class="a"></div><i class="fa fa-search"></i></div>
+		<div class="b"><p>共202054件商品</p></div>
+		</div>
+	</div>
+	<div class="box9">
+		<div class="c">
+			<div class="d">品牌</div>
+			
+		</div>
+		<div class="e">
+			<li><a href="#">汉尚华莲</a></li>
+				<li><a href="#">重回汉唐</a></li>
+			<li><a href="#">色萱</a></li>
+			<li><a href="#">JKJS</a></li>
+			<li><a href="#">花朝记</a></li>
+			<li><a href="#">珂卡蝶</a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			<li><a href="#"></a></li>
+			
+			<li><a href="#">多选</a></li>
+			<li><a href="#">更多<i class="fa fa-angle-down" style="font-size:24px"></i></a></li>
+		</div>
+		</div>
+		
+	</div>
+	<div class="box10">
+		<img src="js/img/搜狗截图20191114092731.png" width="1240px"/>
+	</div>
+	<div class="box12">
+	
+	<div class="box13">
+		<div class="f">
+			<img src="js/img/O1CN01BT4wpg29wVMxA27tx_!!0-item_pic.jpg"  />
+		</div>
+		<div class="g">
+		<p>	<strong>杜若汉服女广袖流仙裙清新淡雅襦裙古风服装中国风魏晋风古装秋装 </strong></p>
+			
+		<p>	<strong>价格 :<span>¥ 256.00</span></strong></p>
+			
+		<p>	<strong>促销价 :<span>¥ 128.00 </span>上新特惠    </strong></p>
+			
+		<p>	<strong>运费 : 山东菏泽至 湘潭 快递: 0.00 </strong></p>
+			
+		<p>	<strong>月销量1244  累计评价802  送天猫积分64</strong></p>
+		</div>
+	</div>	
+	<div class="box13">
+		<div class="f">
+			<img src="js/img/O1CN01cO8sSo1Bts9eey6XI_!!0-saturn_solar.jpg_220x220.jpg" />
+		</div>
+		<div class="g">
+		<p>	<strong>忆念素仙汉服女装古装改良唐装刺绣连帽短斗蓬外套绣花襦裙套装 </strong></p>
+			
+		<p>		<strong>价格 :<span>¥ 288.00-518.00</span></strong></p>
+			
+		<p>		<strong>促销价 :<span>¥ 238.00-468.00</span></strong></p>
+			
+		<p>		<strong>运费 :江西赣州至 湘潭 快递: 0.00 </strong></p>
+			
+		<p>		<strong>月销量77  累计评价84  送天猫积分119起</strong></p>
+		</div>
+	</div>	
+	<div class="box13">
+		<div class="f">
+			<img src="js/img/O1CN01Wh2pxI1flZRb8yxWt_!!0-item_pic.jpg" />
+		</div>
+		<div class="g">
+		<p>		<strong>清欢正品原创汉服女中国风汉服齐胸襦裙秋冬季女套装加厚6米大摆 </strong></p>
+			
+		<p>		<strong>价格 :<span>¥ 388.00</span></strong></p>
+		
+		<p>		<strong>促销价 :<span>¥ 98.00 <span>促销优惠   </strong></p>
+			
+			
+		<p>		<strong>运费 :江苏苏州至 湘潭 快递: 0.00 </strong></p>
+			
+			
+		<p>		<strong>月销量324   累计评价11   送天猫积分49</strong></p>
+		</div>
+	</div>	
+	
+	</div>	
+
+	</div>	
+	</div>
 	</body>
 </html>
