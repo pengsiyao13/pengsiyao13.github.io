@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+		td{
+			text-align: center;
+		}
+		.box1{
+			margin: auto;
+			width: 200px;
+			
+		}
+		button{
+			color: hotpink;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+	<strong>姓名：<input type="text" id="name"  /></strong>
+	<br />
+	<strong>	性别：<input type="radio" name="sex" >男<input type="radio" name="sex" width="30px">女</strong>
+	<br />
+	<button   type="button"   onclick="adde()">增加</button>
+	<button type="submit" onclick="sub()">提交</button>
+	<br />
+	
+	<table  border="1" id="myTable" >
+		<tr  >
+			<td>编号</td>
+			<td>姓名</td> 
+			<td>性别</td>
+			<td>操作</td>
+		</tr>
+		<tr  id="xx">
+			<td>1</td>
+			<td>张三</td>
+			<td>男</td>
+			<td ><button type="button" onclick="deleteRow(this)">删除</button></td>
+		</tr>
+		<tr id="xx">
+			<td>2</td>
+			<td id="www">李四</td>
+			<td>男</td>
+			<td  ><button type="button"  onclick="deleteRow(this)"  >删除</button></td>
+		</tr>
+		<tr id="xx">
+			<td>2</td>
+			<td id="www">王五</td>
+			<td>男</td>
+			<td  ><button type="button"  onclick="deleteRow(this)"  >删除</button></td>
+		</tr>
+		
+  
+	
+	</table>
+	</div>
+	 <script type="text/javascript">
+	 	function sub(){
+	 		alert("恭喜你完成表格")
+	 		
+	 		
+	 	}
+    function deleteRow(r){
+	var i=r.parentNode.parentNode.rowIndex;
+	document.getElementById('myTable').deleteRow(i);
+}
+    function adde(){
+    	var dd=document.createElement("tr");
+    	var ff=document.createElement("td");
+    	var ss=document.createElement("td");
+    	var hh=document.createElement("td");
+    	var kk=document.createElement("button")
+    	
+    var list=document.getElementById("myTable");
+    
+    list.appendChild(dd);
+    dd.appendChild(ff);
+    
+     dd.appendChild(ss);
+      dd.appendChild(hh);
+       dd.appendChild(kk);
+    
+       ff.innerHTML="1";
+       hh.innerHTML="男";
+       ss.innerHTML="xxx"
+       kk.innerHTML="<button type='button' onclick='deleteRow(this)'>删除</button>"
+     
+      
+    }
+    
+</script>
+	</body>
+</html>
