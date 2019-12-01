@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+<body>
+	 <div data-role="header">
+    <h1>个人信息登记表</h1>
+	 <div data-role="main" class="ui-content">
+    <form method="post" action="demo_form.php">
+      <div class="ui-field-contain">
+        <label for="fullname">全名：</label>
+        <input type="text" name="fullname" id="fullname">       
+        <label for="bday">生日：</label>
+        <input type="date" name="bday" id="bday">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" placeholder="你的电子邮箱..">
+          <label for="QQ">QQ账号：</label>
+        <input type="text" name="QQ" id="QQ" >
+        <label for="QQ">QQ密码：</label>
+        <input type="password" name="QQ" id="QQ" >
+        <label for="shoujihao">手机号码：</label>
+        <input type="text" name="shoujihao" id="shoujihao" >
+        <label for="addess">所属学校：</label>
+        <input type="text" name="addess" id="addess" >
+      <label>请选择您的性别：</label>
+        <label for="male">男性</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label></label>
+        <label for="female">女性</label>
+        <input type="radio" name="gender" id="female" value="female"> 
+      </fieldset>
+      
+      
+   
+    <label for="info">附加信息:</label>
+        <textarea name="addinfo" id="info"></textarea>
+        <fieldset data-role="controlgroup">
+      </div>
+      <input type="submit" data-inline="true" value="提交">
+    </form>
+  </div>
+</div>
+</body>
+		
+</html>

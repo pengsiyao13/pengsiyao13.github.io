@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	
 		<meta charset="utf-8" />
 		<title></title>
+		<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+			
+		</script>
+		<script>
+			$(document).ready(function(){
+				$("#flip").click(function(){
+					$("#panel").slideToggle("slow");
+				});
+			});
+			
+		</script>
+		<style type="text/css">
+			#panel,#flip{
+				padding: 5px;
+				text-align: center;
+				background-color: deeppink;
+				border: 1px solid black;
+			}
+			#panel{
+				padding: 50px;
+				display: none;
+			}
+		</style>
 	</head>
 	<body>
-		<iframe src="h1.html" name="h1"></iframe>
-		<p><a href="http://www.baidu.com" target="h1">点击</a></p>
+   <div id="flip">点我下滑面板</div>
+   <div id="panel">Hello world!</div>
+
 	</body>
 </html>

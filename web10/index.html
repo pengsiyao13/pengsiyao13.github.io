@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			
+<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+		<title></title>
+		 <style>
+		 	*{
+
+margin: 0;
+
+padding: 0;
+
+}
+
+#content-1{
+
+position: relative;
+
+width: 80%;
+
+height: 400px;
+
+background: red;
+
+left: 100px;
+
+}
+
+.ul-1{
+
+width: 100%;
+
+height: 4s00px;
+
+position: relative;
+
+list-style: none;
+
+}
+
+.li-1{
+
+width: 100%;
+
+height: 100%;
+
+position: absolute;
+
+color: white;
+
+font-size: 70px;
+
+opacity: 0;
+
+transition: all .5s;
+
+}
+
+.li-1:nth-child(1){
+
+background: rgb(251, 255, 3);
+
+}
+
+.li-1:nth-child(2){
+
+background: rgb(7, 242, 250);
+
+}
+
+.li-1:nth-child(3){
+
+background:palevioletred;
+
+}
+
+.li-1:nth-child(4){
+
+background:rgb(243, 6, 85);
+
+}
+
+.li-1:nth-child(5){
+
+background:rgb(9, 247, 68);
+
+}
+
+.button_big{
+
+width: 40px;
+
+height: 80px;
+
+background: white;
+
+font-size: 30px;
+
+position: absolute;
+
+top: 250px;
+
+border: 0;
+
+z-index: 999;
+
+}
+
+#btn-pre{
+
+left: 20px;
+
+}
+
+#btn-next{
+
+right: 20px;
+
+}
+
+.li-1.active{
+
+z-index: 888;
+
+opacity:1;
+
+}
+
+/*五个圆圈*/
+
+#ul-2{
+
+position: absolute;
+
+top:80%;
+
+left: 36%;
+
+z-index: 1000;
+
+list-style: none;
+
+}
+
+.circle{
+
+width: 12px;
+
+height: 12px;
+
+margin-left: 20px;
+
+float: left;
+
+border: 3px solid white;
+
+border-radius: 100%;
+
+background: rgb(112, 110, 111);
+
+cursor: pointer;
+
+}
+
+.circle.styles{
+
+background: white;
+
+}
+
+		
+			.box1{
+				width: 100%;
+				height: 310px;
+				position: relative;
+				background-image: url(img/1575224420854.jpg);
+			}
+			.box2{
+				padding: 0;
+				width: 80%;
+				height: 50px;
+				margin: auto;
+				background-color:;
+				display: flex;
+			    margin-top: 20px;
+				justify-content:  space-between;
+				
+				
+			}
+			.box2 li{
+				display: inline-block;
+               width: 24%;
+               height: 40px;
+				background-color:;
+				margin: 1px ;
+				border: 1px black solid;
+				list-style: none;
+					text-align: center;
+				}
+			.box2 li:hover{
+				background-color:  saddlebrown;
+				margin: 2px;
+			}	
+			
+			.box3{
+				width: 80%;
+				height: 400px;
+				margin: auto;
+				background-color:;
+				
+			}
+			.box2 a{
+				text-decoration: none;
+				color: black;
+				font-size: 20px;
+			 width: 24%;
+               height: 40px;
+				
+			
+			}
+			.b{
+				width: 100%;
+				height: 40px;
+				background-color:  #FFFFFF;
+				opacity: 0.5;
+				position: relative;
+			}
+			.b li{
+				list-style: none;
+				display: inline-block;
+				width:130px;
+			}
+			strong{
+				font-size: 24px;
+			}
+			.box4{
+				width: 10%px;
+				height: 200px;
+				float: left;
+				
+				
+			}
+			.box4 li{
+				width: 100px;
+				height: 35px;
+				list-style: none;
+				padding-top: 10px;
+				
+				text-align: center;
+				border: 1px black solid;
+				border-radius: 20px;
+				margin-top: 40px;
+				
+				
+			}
+			.box4 li:hover{
+				background-color:  saddlebrown;
+				
+				border: 2px;
+			}
+			.box4 a{
+				
+				text-decoration: none;
+				color: #000000 ;
+				
+			}
+			.box5{
+				width: 70%;
+				height: 400px;
+				background-color: ;
+				float: left;
+				margin-left: 50px;
+			}
+			.box6{
+				width: 80%;
+				margin: auto;
+				height: 1200px;
+				background-color: ;
+			}
+			.box7{
+				width: 100%;
+				height: 100px;
+				background-color: ;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			.f{
+				width: 16%;
+				height: 400px;
+				float: right;
+				border: 1px black solid;
+			}
+			.f:hover{
+				border: 2px   saddlebrown solid;
+			}
+			.box8{
+				width: 100%;
+				height: 400px;
+				background-color:;
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 20px;
+				
+			}
+			.box9{
+				width: 26%;
+				height: 400px;
+				background-color:;
+				border: 1px solid black;
+				text-align: center;
+				border-radius: 8px;
+				
+				
+			}
+			.box9 img{
+				border-radius: 8px;
+			}
+			.box9:hover{
+				border: 2px   saddlebrown solid;
+			}
+			.box11{
+				width: 100%;
+				height: 300px;
+				float: right;
+				background-color:;
+				display: flex;
+				justify-content: space-between;
+				text-align: center;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			.box12{
+				width: 25%;
+				height: 300px;
+				background-color:;
+				border: 1px black solid;
+				border-radius: 18px;
+				text-align: center;
+			}
+			.box13{
+				width: 40%;
+				height: 300px;
+				border: 1px black solid ;
+				background-color:;
+				float: left;
+				border-radius: 18px;
+				
+			}
+			.box12:hover{
+				border: 2px   saddlebrown solid;
+			}
+			.box13:hover{
+				border: 2px   saddlebrown solid;
+			}
+			
+			
+			.box14{
+				width: 100%;
+				height: 300px;
+				background-color:;
+				float: right;
+			text-align: center;
+			margin-bottom: 20px;
+				
+				
+			}
+			
+			
+			.box15{
+				width: 80%;
+				height: 200px;
+				background-color:  ;
+				margin: auto;
+				
+			}
+			.box14 h2{
+				text-align: center;
+			}
+			.box12 a{
+				float: right;
+			}
+			.b a:hover{
+				color:   saddlebrown;
+			}
+			button{
+				border-radius: 16px;
+			}
+			.rr{
+				width: 100%;
+				height:  auto;
+				background-color:peru;
+				
+			}
+			
+		</style>
+			
+	</head>
+	<body>
+		<div class="rr">
+		<div class="box1">
+			<div class="b">
+				<li>首页</li>
+				<li>免费注册</li>
+				<li>嘿，欢迎来到梅斋</li>
+			    <li></li>
+				<li></li>
+				
+				<li><strong>-**梅斋**-</strong></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<a href="page2.html" target="_blank" style="text-decoration: none; color: #000000; width: 70px;height: 40px; border: 1px black solid;">登录</a>
+				
+				<i class="fa fa-user-circle" style="font-size:24px; color: #000000;"></i>
+				
+				<i class="fa fa-qq" style="font-size:24px; color: #F25D8E;"></i>
+				<i class="fa fa-wechat" style="font-size:24px; color: lime;" ></i>
+				<i class="fa fa-weibo" style="font-size:24px; color: #F91616;"></i>
+				
+				
+				
+			</div>
+		</div>
+		<div class="x">
+		<div class="box2">
+			<li><a href="#">首页</a></li>
+			<li><a href="page1.html" target="_blank">成果展示</a></li>
+			<li><a href="page3.html" target="_blank">个人中心</a></li>
+			<li><a href="iinner.html" target="_blank">策划书</a></li>
+		</div>
+       <div class="box3">
+       <div class="box4">
+       	<li><a href="#t1">店铺简介</a></li>
+       	<li><a href="#t2">店铺项目</a></li>
+       	<li><a href="#t3">额外服务</a></li>
+       	<li><a href="#t4">调查问卷</a></li>
+       </div>
+      <div class="box5" id="t1">
+      	<div id="content-1">
+
+<ul class="ul-1"><!--图片区域-->
+
+<li class="li-1 active" ><img src="img/1575223685121.jpg" width="100%" height="400px"> </li>
+
+<li class="li-1" ><img src="img/1575223706424.jpg" width="100%" height="400px"></li>
+
+<li class="li-1" ><img src="img/1575223712595.jpg" width="100%" height="400px"></li>
+
+<li class="li-1" ><img src="img/1575223718329.jpg" width="100%" height="400px"></li>
+
+<li class="li-1" ><img src="img/IMG_20191202_021039.jpg" width="100%" height="400px"></li>
+
+</ul>
+
+<button type="button" class="button_big" id="btn-pre"><</button>
+
+<button type="button" class="button_big" id="btn-next">></button>
+
+<ul id="ul-2"><!--小圈圈区域-->
+
+<li class="circle styles" data-index="0"></li>
+
+<li class="circle" data-index="1"></li>
+
+<li class="circle" data-index="2"></li>
+
+<li class="circle" data-index="3"></li>
+
+<li class="circle" data-index="4"></li>
+
+</ul>
+
+</div>
+
+      </div>
+      <div class="f">
+      	
+      	<p>*你是不是想体验和同学一起下厨的神秘感觉？</p>
+      	<br />
+      	<br />
+      	
+      	<p>*梅斋大学生厨房就非常对你的口味，把你从烦闷徘徊中解脱。</p>
+      	<br />
+      	<br />
+      	
+	<p>*同学们只要买来自己喜欢的菜肴，这里有完备的厨房设施和就餐设备，所有像家里一样，营造了一个自由的空间，这是一个史无前例的，结构单一，集中出租灶台的店</p>
+</div>
+
+       </div>
+       </div>
+		<div class="box6">
+			<div class="box7">
+				<img src="img/dce7d1ce7e2e69c6c6c6ecb51e2fe03d.jpg" width="100%"/>
+			</div>
+			<div class="box8" id="t2">
+				<div class="box9">
+					<img src="img/1575225608038.jpg"  width="100%" height="75%"/>
+					<div class="box10">
+						<h2>大规模<i class="fa fa-shopping-cart" style="font-size:24px"></i></h2>
+						<p>班级同学聚会，各地老乡聚会（25-40人）</p>
+					</div>
+				</div>
+				<div class="box9">
+					<img src="img/1575225517091.jpg" width="100%" height="75%"/>
+					<div class="box10">
+						
+						<h2>中等规模<i class="fa fa-shopping-cart" style="font-size:24px"></i></h2>
+						<p>同学生日聚会，部门聚餐（8-25人）</p>
+					</div>
+				</div>
+				<div class="box9">
+					<img src="img/1575225574400.jpg" height="75%" width="100%"/>
+					<div class="box10">
+					<h2>小规模<i class="fa fa-shopping-cart" style="font-size:24px"></i></h2>
+					<p>宿舍聚餐，朋友聚餐，情侣聚餐（1-8人）</p>
+					</div>
+				</div>
+			</div>
+			<img src="img/19_38_55_3E7D5E5F.jpg" width="100%" height="100px" />
+			<div class="box11" id="t3">
+				<div class="box12">
+					<h2>冰箱寄存服务<button>点此预约</button></h2>
+					<br />
+					<br />
+					<p>若你有需要存储的剩菜，你可以预约冰箱寄存服务，</p>
+					<br />
+					<p>我们将把它密封进一个写有你名字的盒子，然后装入冰箱。</p>
+					<br />
+					<p>一个盒子2元，寄存费为3元/天。</p>
+				</div>
+				<div class="box13">
+					<strong >人事招聘</strong>
+					<br />
+					<p>经理招聘：1人，5000元/月（主要负责协助管理店中事务）</p>
+					<br />
+					<p>财务管理人员：3人，4000元/月（主要负责核算店中支出，收益，以及制定价格）</p>
+					<br />
+					<p>宣传人员：3人，4000元/月（主要负责对店在线上线下进行宣传工作）</p>
+					<br />
+					<p>后勤人员：3人，4000元/月（主要负责管理店中后勤相关事务）</p>
+					<br />
+					<p>厨师：4人，5000元/月（主要负责厨师预约服务项目）</p>
+					
+					
+					
+			</div>
+				<div class="box12">
+					<h2>厨师服务<button>点此预约</button></h2>
+					<br />
+					<br />
+					<p>如果你所做的菜品太困难太多需要帮助，或者你想学习做菜需要指导，</p>
+					<br />
+				    <p>可以根据自身的实际需要来选择厨师个数。</p>
+				    <br />
+				    <p>一个厨师30元/小时。</p>
+				</div>
+				
+				</div>
+			<div class="box14" id="t4">
+				
+				<h2>调查问卷填写<a href="diaocha.html" style="text-decoration: none;color: #000000; " target="_blank"><i class="fa fa-angle-double-right" style="font-size:36px"></i></a></h2>
+				
+				<input   type="text" style="width: 80%; height: 250px; border: 1px  saddlebrown solid;" placeholder="填写关于对此页面的意见，以及对店铺的看法....."/>
+				
+			</div>	
+				
+		</div>
+		<div class="box15">
+			<br />
+			<br />
+			<footer>
+				<address>
+			<p>	版权所有：广播电视节目制作经营许可证：（沪）字第1248号|网络文化经营许可证：沪网文【2016】2296-134号|信息网络传播视听节目许可证：0910417</p>
+			<p>互联网ICP备案：沪ICP备13002172号-3沪ICP证：沪B2-20100043 |违法不良信息举报邮箱：help@bilibili.com |违法不良信息举报电话：4000233233转3 | 营业执照</p>
+			</address>
+			</footer>
+			
+		</div>
+		</div>
+		</div>
+		</div>
+		<script type="text/javascript">
+
+var li = document.getElementsByClassName("li-1");//图片
+
+var pre = document.getElementById("btn-pre");//按钮
+
+var next = document.getElementById("btn-next");
+
+var circles = document.getElementsByClassName("circle");//获取圆圈
+
+var index = 0;
+
+//清空样式
+
+function clearli(){
+
+for(var i = 0;i<li.length;i++){
+
+li[i].className = "li-1";
+
+circles[i].className = "circle";
+
+}
+
+}
+
+//添加样式
+
+function goindex(){
+
+clearli();
+
+li[index].className = "li-1 active";
+
+circles[index].className = "circle styles";
+
+}
+
+//返回上一张图片
+
+function gopre(){
+
+if(index==0){
+
+index=4;
+
+}
+
+else{
+
+index--;
+
+}
+
+goindex();
+
+}
+
+//加click事件，执行gopre函数
+
+pre.addEventListener("click",function(){
+
+gopre();
+
+})
+
+//进入下一张图片
+
+function gonext(){
+
+if(index==4){
+
+index=0;
+
+}
+
+else{
+
+index++;
+
+}
+
+goindex();
+
+}
+
+//加click事件，执行gonext函数
+
+next.addEventListener("click",function(){
+
+gonext();
+
+})
+
+//小圆圈的样式和图片切换
+
+for(a=0;a<circles.length;a++){
+
+circles[a].addEventListener("click",function(){
+
+var data_index = this.getAttribute("data-index");
+
+index = data_index;
+
+goindex();
+
+})
+
+}
+
+</script>
+
+
+	</body>
+	
+</html>

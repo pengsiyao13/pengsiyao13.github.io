@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+       
+      <script src="//s1.hdslb.com/bfs/seed/log/report/log-reporter.js"></script>
+      <script src="//s1.hdslb.com/bfs/seed/log/report/5.1320c.function.chunk.js" charset="utf-8"></script>
+      <script src="//s1.hdslb.com/bfs/seed/log/report/7.b40a2.function.chunk.js" charset="utf-8"></script>
+      <script src="//s1.hdslb.com/bfs/seed/log/report/3.9035b.function.chunk.js" charset="utf-8"></script>
+      <script type="text/javascript">
+      window.SentryConfig = {
+        environemnt: 'production',
+        dsn: 'https://06b7f02e7b1a4496a3dba3630381ab05@api.bilibili.com/x/traceback/19',
+        release: '16046',
+        sampleRate: 0.2,
+      }
+    </script>
+    <script src="//s1.hdslb.com/bfs/static/jinkela/long/js/sentry/sentry-5.2.1.min.js" type="text/javascript"></script>
+    <script src="//s1.hdslb.com/bfs/static/activity/activity/sentry-report.js" type="text/javascript"></script>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			div,p,ul,li,a,img,span,h1,h2,h3,h4,h5,h6,header,footer,section,article,form,input,textarea,video,iframe {
+  margin: 0;
+  padding: 0;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font: 12px 'Helvetica Neue',Helvetica,Arial,'Microsoft Yahei','Hiragino Sans GB','Heiti SC','WenQuanYi Micro Hei',sans-serif;
+  background:#fff;
+  color:#222;
+  tap-highlight-color:transparent;
+  -webkit-tap-highlight-color:transparent
+}
+
+ul,li {
+  list-style: none;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+a,input,button,select,textarea {
+  outline: none;
+  cursor: pointer;
+  color:#00a1d6;
+  text-decoration:none;
+}
+
+a:hover{ color:#f25d8e }
+a:focus{ -moz-outline-style:none }
+
+img {
+  border:0;
+  vertical-align: middle;
+}
+
+h1,h2,h3,h4,h5,h6,ul,li{margin:0;padding:0;list-style-type:none}
+
+textarea {
+  overflow: hidden;
+  resize:none
+}
+
+address,caption,cite,code,dfn,em,i,th,var{
+  font-style: normal;
+  font-weight: normal
+}
+
+.clearfix:after {
+  display: block;
+  visibility: hidden;
+  clear: both;
+  width: 0;
+  height: 0;
+  content: '.';
+}
+
+
+/* 动画库插入的节点高度设置100% */
+div[flash-anim-wrap=true] {
+  height: 100%;
+}
+html,
+body,
+div,
+ul,
+li,
+h4,
+span {
+  padding: 0;
+  margin: 0;
+}
+.bili-share-pc {
+  border: 1px solid #e8e9eb;
+  padding: 18px 0 18px 24px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 200;
+  width: 980px;
+  height: 40px;
+  margin: 20px auto;
+  box-sizing: content-box;
+}
+.bili-share-pc li {
+  list-style: none;
+}
+.bili-share-pc.bili-clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.bili-share-pc .bili-clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.bili-share-pc .fl {
+  float: left;
+}
+.bili-share-pc .share {
+  display: inline-block;
+}
+.bili-share-pc .share .icon {
+  background: url('https://activity.hdslb.com/blackboard/shareModule/images/12xn9z34xj.png')
+    no-repeat;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.bili-share-pc .share .icon_bili {
+  background: url('https://i0.hdslb.com/bfs/activity-plat/static/20180321/dfa73b898f143877cbf8ecf001cd9e89/images/l6oq2p5wy7.png')
+    no-repeat;
+  background-position: -370px 0;
+}
+.bili-share-pc .share .icon_bili:hover {
+  background-position: -370px -71px;
+}
+.bili-share-pc .share .icon_weibo {
+  background-position: 0 0;
+}
+.bili-share-pc .share .icon_weibo:hover {
+  background-position: 0 -71px;
+}
+.bili-share-pc .share .icon_wechat {
+  background-position: -74px 0;
+  position: relative;
+}
+.bili-share-pc .share .icon_wechat:hover {
+  background-position: -74px -71px;
+}
+.bili-share-pc .share .icon_qzone {
+  background-position: -148px 0;
+}
+.bili-share-pc .share .icon_qzone:hover {
+  background-position: -148px -71px;
+}
+.bili-share-pc .share .icon_qq {
+  background-position: -222px 0;
+}
+.bili-share-pc .share .icon_qq:hover {
+  background-position: -222px -71px;
+}
+.bili-share-pc .share .icon_baidu {
+  background-position: -296px 0;
+}
+.bili-share-pc .share .icon_baidu:hover {
+  background-position: -296px -71px;
+}
+
+.bili-share-pc .favourite {
+  display: inline-block;
+}
+.bili-share-pc .title {
+  font-size: 18px;
+  color: #222;
+  display: inline-block;
+  padding-right: 20px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.bili-share-pc .vertical-line {
+  margin: 5px 24px 5px 14px;
+  height: 30px;
+  display: inline-block;
+  border-left: 2px solid #e8e9eb;
+}
+.bili-share-pc .favourite .icon-fav {
+  background: url('https://activity.hdslb.com/blackboard/shareModule/images/79lx82m4lq.jpg');
+  width: 65px;
+  height: 50px;
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  cursor: pointer;
+}
+.bili-share-pc .favourite .icon-like {
+  background-position: 0px 5px;
+}
+.bili-share-pc .favourite .fav {
+  padding-right: 0px;
+  width: 54px;
+}
+.bili-share-pc .favourite .icon-like:hover {
+  animation: likePlay 1s steps(14) infinite;
+}
+.bili-share-pc .favourite .icon-liked {
+  background-position: 0px -59px;
+}
+@keyframes likePlay {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -896px 5px;
+  }
+}
+
+.bili-share-pc .popTips {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 12px;
+  opacity: 0;
+  animation: popTips 1.5s;
+}
+@keyframes popTips {
+  0% {
+    opacity: 0;
+    top: 0px;
+  }
+  15% {
+    opacity: 1;
+    top: -15px;
+    transform: scale(1.1, 1.1);
+  }
+  30% {
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 1;
+    top: -15px;
+  }
+  90% {
+    opacity: 1;
+    top: -15px;
+  }
+  100% {
+    opacity: 0;
+    top: 0px;
+  }
+}
+
+/************ 动态遮罩 ***************/
+.bili-wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  background-color: transparent;
+  left: 0;
+  top: 0;
+  display: block;
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/************ 二维码 ***************/
+.bili-share-pc .share .icon_wechat:hover .weixin-hover {
+  display: block;
+}
+.bili-share-pc .weixin-hover {
+  position: absolute;
+  z-index: -1;
+  display: none;
+}
+.bili-share-pc .weixin-hover .qr-before {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
+  width: 50px;
+  height: 81px;
+  top: -18px;
+  position: absolute;
+  left: -6px;
+}
+.bili-share-pc .share-weixin-qr {
+  position: absolute;
+  top: 62px;
+  left: -6px;
+  padding: 15px 13px;
+  background-color: #fff;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+}
+.bili-share-pc .share-weixin-qr h4 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+  margin-bottom: 15px;
+}
+.bili-share-pc .share-weixin-qr .qr-code {
+  width: 120px;
+  text-align: center;
+}
+
+.messageTip {
+  margin: 0;
+  position: absolute;
+}
+
+/************ 自定义 ***************/
+#biliSharePc {
+}
+#biliSharePc li {
+  list-style: none;
+}
+#biliSharePc .share {
+  font-size: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(.5em * 5 - .1em);
+}
+#biliSharePc .share .icon {
+  background: url('https://i0.hdslb.com/bfs/activity-plat/static/20180321/dfa73b898f143877cbf8ecf001cd9e89/images/l6oq2p5wy7.png')
+  no-repeat;
+  width: .4em;
+  height: .4em;
+  line-height: .4em;
+  cursor: pointer;
+  background-size: 4.09em;
+}
+#biliSharePc .share .icon_bili {
+  background-position: -3.7em 0;
+}
+#biliSharePc .share .icon_bili:hover {
+  background-position: -3.7em -.71em;
+}
+#biliSharePc .share .icon_weibo {
+  background-position: 0 0;
+}
+#biliSharePc .share .icon_weibo:hover {
+  background-position: 0 -.71em;
+}
+#biliSharePc .share .icon_wechat {
+  background-position: -.74em 0;
+  position: relative;
+}
+#biliSharePc .share .icon_wechat:hover {
+  background-position: -.74em -.71em;
+}
+#biliSharePc .share .icon_qzone {
+  background-position: -1.48em 0;
+}
+#biliSharePc .share .icon_qzone:hover {
+  background-position: -1.48em -.71em;
+}
+#biliSharePc .share .icon_qq {
+  background-position: -2.22em 0;
+}
+#biliSharePc .share .icon_qq:hover {
+  background-position: -2.22em -.71em;
+}
+#biliSharePc .share .icon_baidu_tieba {
+  background-position: -2.96em 0;
+}
+#biliSharePc .share .icon_baidu_tieba:hover {
+  background-position: -2.96em -.71em;
+}
+#biliSharePc .share .icon_wechat:hover .weixin-hover {
+  display: block;
+}
+#biliSharePc .weixin-hover {
+  position: absolute;
+  z-index: -1;
+  display: none;
+}
+#biliSharePc .weixin-hover .qr-before {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 4px;
+  width: 50px;
+  height: 81px;
+  top: -18px;
+  position: absolute;
+  left: -6px;
+}
+#biliSharePc .share-weixin-qr {
+  position: absolute;
+  top: 62px;
+  left: -6px;
+  padding: 15px 13px;
+  background-color: #fff;
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+}
+#biliSharePc .icon-hover .share-weixin-qr {
+  position: absolute;
+  top: 50px;
+  left: -50px;
+  padding: 15px 13px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+#biliSharePc .share-weixin-qr h4 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+  margin-bottom: 15px;
+}
+#biliSharePc .share-weixin-qr .qr-code {
+  width: 120px;
+  text-align: center;
+}
+
+#webShare {
+  width: 980px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#webShare .bili-share-pc {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  height: 78px;
+}
+@charset "UTF-8";
+/* Author: ひまわり(dtysky<dtysky@outlook.com>)
+ * Github: https://github.com/dtysky
+ * Create: 17/1/11
+ */
+/* Author: ひまわり(dtysky<dtysky@outlook.com>)
+ * Github: https://github.com/dtysky
+ * Create: 2017/2/23
+ */
+.hana-radio-inner {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  font-size: 16px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  vertical-align: middle;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in; }
+  .hana-radio-inner::after {
+    position: absolute;
+    content: "";
+    left: 3px;
+    top: 3px;
+    width: 9px;
+    height: 9px;
+    border-radius: 9px;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in; }
+
+.hana-radio-custom {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  vertical-align: middle; }
+
+.hana-radio {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  font-size: 14px; }
+  .hana-radio span {
+    vertical-align: middle;
+    line-height: 30px; }
+  .hana-radio:hover .hana-radio-inner {
+    border-color: #6cf; }
+
+.hana-radio-checked .hana-radio-inner {
+  border: 1px solid #6cf; }
+
+.hana-radio-checked .hana-radio-inner::after {
+  display: block;
+  background: #6cf; }
+
+.hana-radio-disabled {
+  cursor: not-allowed;
+  color: #ccc; }
+  .hana-radio-disabled:hover .hana-radio-inner {
+    border-color: #ccc; }
+  .hana-radio-disabled.hana-radio-checked .hana-radio-inner {
+    border-color: #ccc; }
+    .hana-radio-disabled.hana-radio-checked .hana-radio-inner::after {
+      background: #ccc; }
+
+.hana-radio-group .hana-radio {
+  margin-right: 10px; }
+
+@charset "UTF-8";
+/* Author: ひまわり(dtysky<dtysky@outlook.com>)
+ * Github: https://github.com/dtysky
+ * Create: 17/1/11
+ */
+/* Author: ひまわり(dtysky<dtysky@outlook.com>)
+ * Github: https://github.com/dtysky
+ * Create: 2017/2/23
+ */
+.hana-checkbox-inner {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  display: inline-block;
+  position: relative;
+  margin-right: 10px;
+  font-size: 16px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  vertical-align: middle; }
+  .hana-checkbox-inner::after {
+    content: "";
+    position: absolute;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border-color: #0088cc;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in; }
+
+.hana-checkbox-custom {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 16px;
+  vertical-align: middle; }
+
+.hana-checkbox {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  font-size: 14px; }
+  .hana-checkbox span {
+    vertical-align: middle;
+    line-height: 30px; }
+  .hana-checkbox:hover .hana-checkbox-inner {
+    border-color: #6cf; }
+
+.hana-checkbox-checked .hana-checkbox-inner {
+  border: 1px solid #6cf; }
+
+.hana-checkbox-checked .hana-checkbox-inner::after {
+  border-color: #6cf;
+  border-style: solid;
+  border-width: 0 1px 1px 0;
+  display: block; }
+
+.hana-checkbox-disabled {
+  cursor: not-allowed;
+  color: #ccc; }
+  .hana-checkbox-disabled:hover .hana-checkbox-inner {
+    border-color: #ccc; }
+  .hana-checkbox-disabled.hana-checkbox-checked .hana-checkbox-inner {
+    border-color: #ccc; }
+    .hana-checkbox-disabled.hana-checkbox-checked .hana-checkbox-inner::after {
+      border-color: #ccc; }
+
+.hana-checkbox-group .hana-checkbox {
+  margin-right: 10px; }
+
+@charset "UTF-8";
+/* Author: ひまわり(dtysky<dtysky@outlook.com>)
+ * Github: https://github.com/dtysky
+ * Create: 17/1/3
+ */
+/* Author: ひまわり(dtysky<dtysky@outlook.com>)
+ * Github: https://github.com/dtysky
+ * Create: 17/1/11
+ */
+/* Author: ひまわり(dtysky<dtysky@outlook.com>)
+ * Github: https://github.com/dtysky
+ * Create: 2017/2/23
+ */
+.hana-divider {
+  margin: 8px 0;
+  height: 1px;
+  border: none;
+  background-color: #ccc; }
+
+@charset "UTF-8";
+/* Author: ひまわり(dtysky<dtysky@outlook.com>)
+ * Github: https://github.com/dtysky
+ * Create: 17/1/11
+ */
+/* Author: ひまわり(dtysky<dtysky@outlook.com>)
+ * Github: https://github.com/dtysky
+ * Create: 2017/2/23
+ */
+.hana-button-error, .hana-button-primary, .hana-button-disabled {
+  border: 0;
+  color: #fff; }
+  .hana-button-error i[class^='hanaicon'], .hana-button-primary i[class^='hanaicon'], .hana-button-disabled i[class^='hanaicon'] {
+    color: #fff; }
+
+.hana-button {
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  white-space: nowrap;
+  height: 22px;
+  line-height: 0;
+  padding: 0 10px;
+  -webkit-transition: border-color 0.25s ease-out, color 0.25s ease-out, background-color 0.25s ease-out, position 0.25s ease-out;
+  transition: border-color 0.25s ease-out, color 0.25s ease-out, background-color 0.25s ease-out, position 0.25s ease-out; }
+  .hana-button:focus {
+    outline: none; }
+
+.hana-button-default {
+  border: 1px solid #ccd0d7;
+  color: #717171; }
+  .hana-button-default i[class^='hanaicon'] {
+    color: #717171; }
+  .hana-button-default:hover {
+    border-color: #646464;
+    color: #646464;
+    z-index: 2; }
+
+.hana-button-error {
+  background-color: #fa2f2f;
+  padding: 15px 18px; }
+  .hana-button-error:hover {
+    background-color: #f91616; }
+
+.hana-button-primary {
+  background-color: #01b5fd;
+  padding: 15px 18px; }
+  .hana-button-primary:hover {
+    background-color: #01a3e4; }
+
+.hana-button-disabled {
+  background-color: #ccd0d7;
+  padding: 15px 18px; }
+  .hana-button-disabled:hover {
+    cursor: not-allowed; }
+
+.hana-button-small {
+  font-size: 12px; }
+
+.hana-button-middle {
+  font-size: 14px;
+  padding: 14px 18px; }
+
+.hana-button-large {
+  font-size: 18px;
+  padding: 20px 28px; }
+
+.hana-button-label {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+  .hana-button-label .button-label {
+    cursor: default; }
+    .hana-button-label .button-label.label-right {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 4px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 4px;
+      -webkit-box-ordinal-group: 3;
+      -webkit-order: 2;
+          -ms-flex-order: 2;
+              order: 2; }
+  .hana-button-label .button-label-default {
+    background-color: #ccd0d7;
+    border: 1px solid #ccd0d7;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    color: #fff;
+    padding: 5px 12px; }
+    .hana-button-label .button-label-default > i {
+      vertical-align: initial; }
+  .hana-button-label > a {
+    border: 1px solid #ccd0d7;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #717171;
+    font-weight: bold;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none; }
+    .hana-button-label > a.label-right {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 0; }
+    .hana-button-label > a:hover {
+      color: #01b5fd; }
+
+@charset "UTF-8";
+/* Author: ひまわり(dtysky<dtysky@outlook.com>)
+ * Github: https://github.com/dtysky
+ * Create: 17/1/11
+ */
+/* Author: ひまわり(dtysky<dtysky@outlook.com>)
+ * Github: https://github.com/dtysky
+ * Create: 2017/2/23
+ */
+.hana-modal-main .hana-modal-title-wrapper .icon-close, .hana-modal-main .hana-modal-content + .icon-close {
+  cursor: pointer;
+  position: absolute;
+  right: 15px; }
+
+.hana-modal {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 512;
+  -webkit-box-pack: center; }
+  .hana-modal-overlay {
+    background-color: rgba(0, 0, 0, 0.46);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 512; }
+  .hana-modal-main {
+    -webkit-box-pack: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px;
+    min-height: 130px;
+    min-width: 600px;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-align-self: center;
+            align-self: center;
+    margin: 0 auto;
+    z-index: 512; }
+    .hana-modal-main .hana-modal-title-wrapper {
+      font-size: 18px;
+      min-height: 38px;
+      position: relative; }
+      .hana-modal-main .hana-modal-title-wrapper .hana-modal-title {
+        padding: 10px 15px; }
+      .hana-modal-main .hana-modal-title-wrapper .icon-close {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+                transform: translateY(-50%); }
+    .hana-modal-main .hana-modal-content {
+      margin-bottom: 35px;
+      max-height: 635px;
+      overflow: auto;
+      padding: 15px 20px;
+      overflow-y: auto; }
+    .hana-modal-main .hana-modal-button {
+      bottom: 5px;
+      position: absolute;
+      right: 5px; }
+
+.hana-overlay-enter {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in; }
+  .hana-overlay-enter.hana-overlay-enter-active {
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    opacity: 1; }
+
+.hana-overlay-exit {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in; }
+  .hana-overlay-exit.hana-overlay-exit-active {
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    opacity: 1; }
+
+.hana-modal-enter {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in; }
+  .hana-modal-enter.hana-modal-enter-active {
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    opacity: 1; }
+
+.hana-modal-exit {
+  opacity: 1;
+  -webkit-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in; }
+  .hana-modal-exit.hana-modal-exit-active {
+    -webkit-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    opacity: 0; }
+
+.activity-questions {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
+  font-size: 16px; }
+  @media screen and (min-width: 750px) {
+    .activity-questions {
+      width: 750px;
+      margin: 0 auto; } }
+  .activity-questions-alert {
+    position: relative;
+    min-height: 169px; }
+    .activity-questions-alert-img {
+      width: 195px;
+      height: 169px;
+      display: inline-block; }
+    .activity-questions-alert-message {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      margin-left: 100px;
+      color: #f25d8e;
+      font-size: 18px; }
+  .activity-questions-submit {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    display: block;
+    margin: 10px auto; }
+    .activity-questions-submit:active, .activity-questions-submit:hover {
+      background-color: initial;
+      border-color: initial; }
+  .activity-questions-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e9ef; }
+    .activity-questions-item-title {
+      padding: 5px 0;
+      font-size: 16px; }
+    .activity-questions-item-hint {
+      color: #e40c0c;
+      padding: 0 5px 5px;
+      font-size: 12px; }
+    .activity-questions-item-content {
+      padding-left: 10px; }
+    .activity-questions-item-required {
+      color: #e40c0c;
+      margin-right: 5px;
+      vertical-align: middle; }
+    .activity-questions-item-text, .activity-questions-item-textarea {
+      margin: 5px 0;
+      outline: 0;
+      border: 1px solid #ccd0d7;
+      font-size: 14px;
+      padding: 5px 8px;
+      color: #222;
+      -webkit-transition: .5s all ease-in-out;
+      transition: .5s all ease-in-out; }
+      .activity-questions-item-text:focus, .activity-questions-item-textarea:focus {
+        border-color: #6cf; }
+    .activity-questions-item-text {
+      border-width: 0 0 1px 0;
+      width: 300px; }
+    .activity-questions-item-textarea {
+      border-radius: 4px;
+      width: 100%; }
+    .activity-questions-item-table {
+      font-size: 14px;
+      width: 100%;
+      border-collapse: collapse; }
+      .activity-questions-item-table tr {
+        border-bottom: 1px solid #eee;
+        background: #fff; }
+      .activity-questions-item-table th, .activity-questions-item-table td {
+        padding: 10px 20px;
+        font-weight: normal;
+        border: 1px solid #d8e2fc; }
+      .activity-questions-item-table .hana-radio {
+        text-align: center; }
+        .activity-questions-item-table .hana-radio-inner {
+          margin-right: 0; }
+  .activity-questions .hana-radio,
+  .activity-questions .hana-checkbox {
+    display: block; }
+     .box1{
+     	width: 100%;
+     	height: 40px;
+     	text-align: center;
+     }
+
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+		<h1>调查问卷</h1>
+		</div>
+	
+	<article class="tpl-wrap" id="app"><section class="container-wrapper" style="position:relative;box-sizing:border-box;height:auto;overflow:hidden;min-width:1280px"><div class="t-space-container" style="position:relative;height:100%;box-sizing:border-box;padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;margin:0 auto;width:1280px"><div id="MT5Oe2HTe-" style="position:relative;height:100%" data-module="Question" data-container="section"><div class="activity-questions"><div class="activity-questions-list"><div class="activity-questions-item"><p class="activity-questions-item-title"><span class="activity-questions-item-required">*</span><span>1.</span>您是否喜欢当前店铺？</p><section class="activity-questions-item-content"><section class="hana-radio-group"><label class="hana-radio"><div class="hana-radio-inner"></div><input name="hana-radio-group-0.4640067155366592" style="display: none;" type="radio" value="A"><span><span>A.非常喜欢</span></span></label><label class="hana-radio"><div class="hana-radio-inner"></div><input name="hana-radio-group-0.4640067155366592" style="display: none;" type="radio" value="B"><span><span>B.比较喜欢</span></span></label><label class="hana-radio"><div class="hana-radio-inner"></div><input name="hana-radio-group-0.4640067155366592" style="display: none;" type="radio" value="C"><span><span>C.一般</span></span></label><label class="hana-radio"><div class="hana-radio-inner"></div><input name="hana-radio-group-0.4640067155366592" style="display: none;" type="radio" value="D"><span><span>D.不太喜欢</span></span></label><label class="hana-radio"><div class="hana-radio-inner"></div><input name="hana-radio-group-0.4640067155366592" style="display: none;" type="radio" value="E"><span><span>E.非常不喜欢</span></span></label></section></section></div><div class="activity-questions-item"><p class="activity-questions-item-title"><span class="activity-questions-item-required">*</span><span>2.</span>您觉得本店铺提供的服务能否满足您的需求？</p><section class="activity-questions-item-content"><section class="hana-radio-group"><label class="hana-radio"><div class="hana-radio-inner"></div><input name="hana-radio-group-0.4286538939856108" style="display: none;" type="radio" value="A"><span><span>A.完全满足</span></span></label><label class="hana-radio"><div class="hana-radio-inner"></div><input name="hana-radio-group-0.4286538939856108" style="display: none;" type="radio" value="B"><span><span>B.基本满足</span></span></label><label class="hana-radio"><div class="hana-radio-inner"></div><input name="hana-radio-group-0.4286538939856108" style="display: none;" type="radio" value="C"><span><span>C.一般</span></span></label><label class="hana-radio"><div class="hana-radio-inner"></div><input name="hana-radio-group-0.4286538939856108" style="display: none;" type="radio" value="D"><span><span>D.不太满足</span></span></label><label class="hana-radio"><div class="hana-radio-inner"></div><input name="hana-radio-group-0.4286538939856108" style="display: none;" type="radio" value="E"><span><span>E.完全不满足</span></span></label></section></section></div><div class="activity-questions-item"><p class="activity-questions-item-title"><span class="activity-questions-item-required">*</span><span>3.</span>您比较满意本店铺的哪项服务？</p><section class="activity-questions-item-content"><section class="hana-checkbox-group"><label class="hana-checkbox"><div class="hana-checkbox-inner"></div><input style="display: none;" type="checkbox" value="A"><span><span>A.环境卫生好</span></span></label><label class="hana-checkbox"><div class="hana-checkbox-inner"></div><input style="display: none;" type="checkbox" value="B"><span><span>B.服务态度好</span></span></label><label class="hana-checkbox"><div class="hana-checkbox-inner"></div><input style="display: none;" type="checkbox" value="C"><span><span>C.设备器材好</span></span></label><label class="hana-checkbox"><div class="hana-checkbox-inner"></div><input style="display: none;" type="checkbox" value="D"><span><span>D.厨师厨艺好</span></span></label><label class="hana-checkbox"><div class="hana-checkbox-inner"></div><input style="display: none;" type="checkbox" value="E"><span><span>E.我要吐槽，请在下一题补充</span></span></label></section></section></div><div class="activity-questions-item"><p class="activity-questions-item-title"><span class="activity-questions-item-required">*</span><span>4.</span>关于本次改版，你的更多看法和建议</p><section class="activity-questions-item-content"><textarea class="activity-questions-item-textarea" rows="10"></textarea></section></div></div><button class="activity-questions-submit"><img alt="提交" src="//activity.hdslb.com/blackboard/rhyme/images/29k2978lqy.png"></button></div></div></div></section><section class="container-wrapper" style="position:relative;box-sizing:border-box;height:auto;overflow:hidden;min-width:980px"><div class="t-space-container" style="position:relative;height:100%;box-sizing:border-box;padding-top:0px;padding-bottom:0px;padding-left:0px;padding-right:0px;margin:0 auto;width:980px"><div id="MJmjRduUeE1" style="position:relative;height:100%" data-module="Share" data-container="section"></div></div></section></article>
+	
+	
+	<script>
+  window.__BILIACT_ENV__ = "PC";
+  window.__initialState = {"BaseInfo":{"headerTemplate":"header","title":"新版首页使用反馈","description":"哔哩哔哩新版首页使用后问卷调研","keywords":"哔哩哔哩，问卷，使用体验","topicInfo":{"title":"","topic_id":""},"shareText":"关于哔哩哔哩新版首页使用后的问卷调研","sharePicture":"https://i0.hdslb.com/bfs/activity-plat/static/be223d6e1280cfa60273f661cee27eab/Rq5TyQ7JR_w226_h101.png"},"GlobalConfig":{"animation":{"schemes":{},"bindMap":{}}},"Question":[{"id":"MT5Oe2HTe-","questions":[{"title":"您是否习惯当前首页？","subtitle":"","required":true,"options":[{"label":"非常习惯"},{"label":"比较习惯"},{"label":"一般"},{"label":"不太习惯"},{"label":"非常不习惯"}],"related":"","maxSelected":"","hideOptionNumber":false,"type":"radio"},{"title":"您觉得本次改动能否满足您的需求？","subtitle":"","required":true,"options":[{"label":"完全满足"},{"label":"基本满足"},{"label":"一般"},{"label":"不太满足"},{"label":"完全不满足"}],"related":"","maxSelected":"","hideOptionNumber":false,"type":"radio"},{"title":"您比较满意本次页面改版的哪项优化","subtitle":"","required":true,"options":[{"label":"顶部操作栏的图形化设计"},{"label":"顶部操作栏浮层展示更多信息更加方便查看"},{"label":"分区双栏展示"},{"label":"动态，排行榜更加醒目且操作方便"},{"label":"我要吐槽，请在下一题补充"}],"related":"","maxSelected":4,"hideOptionNumber":false,"type":"checkbox"},{"title":"关于本次改版，你的更多看法和建议","subtitle":"","required":true,"related":"","type":"textarea"}],"sourceId":"12042","submitBtnImage":"","returnUrl":"https://www.bilibili.com/","notShowNumber":false,"@woodman/node":"MT5Oe2HTe-"}],"Share":[{"@woodman/node":"MJmjRduUeE1","id":"MJmjRduUeE1"}]}
+</script>
+<div id="webShare"><div class="bili-share-pc bili-clearfix">
+                  <div class="share bili-clearfix fl">
+                    <div class="title fl">分享</div>
+                    <ul class="fl shareIcon">
+                      <li class="icon icon_bili" data-way="bili"></li>
+                      <li class="icon icon_weibo" data-way="weibo"></li>
+                      <li class="icon icon_wechat" data-way="wechat">
+                        <div class="weixin-hover">
+                          <div class="qr-before"></div>
+                          <div class="share-weixin-qr">
+                            <h4>微信扫一扫分享</h4>
+                            <div title="https://www.bilibili.com/blackboard/activity-SQuHVHQSd.html?share_source=weixin&amp;share_medium=web&amp;bbid=D8A54699-CC65-4DB1-A91F-F3CCC1F94362155815infoc&amp;ts=1575213759099" class="qr-code"><canvas width="120" height="120" style="display: none;"></canvas><img style="display: block;" src="data:image/png;base64,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"></div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="icon icon_qzone" data-way="qzone"></li>
+                      <li class="icon icon_qq" data-way="qq"></li>
+                      <li class="icon icon_baidu" data-way="baidu_tieba"></li>
+                    </ul>
+                  </div>
+                  <div class="bili-favoried-icon"></div>
+                </div><script>
+    var c = null;
+    if (c) {
+      c.onmouseenter = function(e) {
+        window.reportMsgObj &&
+          window.reportObserver &&
+          ((window.reportMsgObj['share_' + c.dataset ? c.dataset.way : 'default'] = 1),
+          window.reportObserver.forceCommit());
+      }
+      
+      c.onmouseleave = function(e) {
+        return false;
+      }
+    }
+  </script></div>
+  <div class="footer bili-footer"><div class="footer-wrp"><div class="cards"><a href="//www.bilibili.com/v/copyright/intro" target="_blank"></div><广播电视节目制作经营许可证：<span>（沪）字第1248号</span> | 网络文化经营许可证：<span>沪网文[2016]2296-134号</span> | 信息网络传播视听节目许可证：<span>0910417</span> | 互联网ICP备案：<a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备13002172号-3</a> 沪ICP证：<span>沪B2-20100043</span> | 违法不良信息举报邮箱：help@qq.com
+	<br />
+	<br />
+	</body>
+</html>
