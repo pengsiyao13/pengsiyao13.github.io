@@ -5,7 +5,7 @@
 <title>照片墙面效果</title>
 <style type="text/css">
 *{margin: 0;padding: 0;}
-body{overflow:hidden;background: url(images/bg.jpg);background-size: cover;}
+body{overflow:hidden;background:url(img/2.jpg); background-size: cover;}
 .container{
 	width:100%;
 	height: 100%;
@@ -17,17 +17,17 @@ body{overflow:hidden;background: url(images/bg.jpg);background-size: cover;}
 	height: 100%; width: 100%;
 
 
-	display: -webkit-box; /*使用CSS3的盒模型之流式布局*/
+	display: -webkit-box; 
 	display: -moz-box;
 	display: box;
 
-	-webkit-box-pack:center; /*定义盒模型内部元素在水平方向上居于中间位置*/
+	-webkit-box-pack:center; 
 	-moz-box-pack:center;
 	-o-box-pack:center;
 	-ms-box-pack:center;
 	box-pack:center;
 
-	-webkit-box-align:center; /*定义盒模型内部元素在垂直方向上居于中间位置*/
+	-webkit-box-align:center; 
 	-moz-box-align:center;
 	-o-box-align:center;
 	-ms-box-align:center;
@@ -44,23 +44,23 @@ body{overflow:hidden;background: url(images/bg.jpg);background-size: cover;}
 	margin: 5px;padding:10px 10px 20px 10px;
 	text-align: center;
 	font-size:20px;
-	box-shadow:.2em .2em .8em #130c0e; /*给照片添加阴影效果，富有立体感*/
+	box-shadow:.2em .2em .8em #130c0e; 
 
 	
 }
 
 .photoview p{
-	margin-top:5px;  /*设置照片内显示文字段落的外上边距*/
+	margin-top:5px; 
 }
 
 .photo01{
-	-weikit-transform-origin:right bottom; /*设置右下角为旋转基准点 */
+	-weikit-transform-origin:right bottom; 
 	-moz-transform-origin:right bottom;
 	-o-transform-origin:right bottom;
 	-ms-transform-origin:right bottom;
 	transform-origin:right bottom;
 
-	transform:rotate(10deg); /*以右下角为基准点顺时针旋转10°*/
+	transform:rotate(10deg);
 	-webkit-transform:rotate(10deg);
 	-moz-transform:rotate(10deg);
 	-o-transform:rotate(10deg);
@@ -69,13 +69,13 @@ body{overflow:hidden;background: url(images/bg.jpg);background-size: cover;}
 
 }
 .photo02{
-	-weikit-transform-origin:right bottom; /*设置右下角为旋转基准点 */
+	-weikit-transform-origin:right bottom;
 	-moz-transform-origin:right bottom;
 	-o-transform-origin:right bottom;
 	-ms-transform-origin:right bottom;
 	transform-origin:right bottom;
 
-	transform:rotate(-20deg); /*以右下角为基准点逆时针旋转20°*/
+	transform:rotate(-20deg); 
 	-webkit-transform:rotate(-20deg);
 	-moz-transform:rotate(-20deg);
 	-o-transform:rotate(-20deg);
@@ -83,72 +83,96 @@ body{overflow:hidden;background: url(images/bg.jpg);background-size: cover;}
 }
 
 .photo03{
-	-weikit-transform-origin:left top; /*设置左上角为旋转基准点 */
+	-weikit-transform-origin:left top;
 	-moz-transform-origin:left top;
 	-o-transform-origin:left top;
 	-ms-transform-origin:left top;
 	transform-origin:left top;
 
-	transform:rotate(20deg); /*以左上角为基准点顺时针旋转20°*/
+	transform:rotate(20deg); 
 	-webkit-transform:rotate(20deg);
 	-moz-transform:rotate(20deg);
 	-o-transform:rotate(20deg);
 	-ms-transform:rotate(20deg);
 }
 .photo04{
-	-weikit-transform-origin:left bottom; /*设置左下角为旋转基准点 */
+	-weikit-transform-origin:left bottom; 
 	-moz-transform-origin:left bottom;
 	-o-transform-origin:left bottom;
 	-ms-transform-origin:left bottom;
 	transform-origin:left bottom;
 
-	transform:rotate(-20deg); /*以左下角为基准点逆时针旋转20°*/
+	transform:rotate(-20deg); 
 	-webkit-transform:rotate(-20deg);
 	-moz-transform:rotate(-20deg);
 	-o-transform:rotate(-20deg);
 	-ms-transform:rotate(-20deg);
 }
+
+            #show{width:600px;height:30px;
+            text-align: center;
+            background-color: ;
+            margin: auto;}
+        
+
 </style>
 </head>
 <body>	
 
 <div class="container">
+	<h1 style="width: 200px;height: 40px;margin: auto;">成果分享</h1>
+	<div id="show">
+        	
+        </div>
 	<div class="photowall">
 	
 		<div class="photo01">
 			<div class="photoview" >
-				<img src="images/1.jpg" width="300" height="220">
-				<p>完美的星空</p>
-				<p>不新鲜的萝卜皮</p>
+				<img src="img/1575264180615.jpg" width="300" height="220">
+				<p>香酥鸡腿</p>
+				
 			</div>
 		</div>
 		
 		<div class="photo02">
 			<div class="photoview" >
-				<img src="images/2.jpg" width="300" height="220">
-				<p>海边的黄昏</p>
-				<p>不新鲜的萝卜皮</p>
+				<img src="img/1575264213086.jpg" width="300" height="220">
+				<p>草莓石榴巧克力蛋糕</p>
+				
 			</div>
 		</div>
 		
 		<div class="photo03">
 			<div class="photoview" >
-				<img src="images/3.jpg" width="300" height="220">
-				<p>城市落日余晖</p>
-				<p>不新鲜的萝卜皮</p>
+				<img src="img/1575264204796.jpg" width="300" height="220">
+				<p>扬州炒饭</p>
+				
 			</div>
 		</div>
 		
 		<div class="photo04">
 			<div class="photoview" >
-				<img src="images/4.jpg" width="300" height="220">
-				<p>大海的夜空</p>
-				<p>不新鲜的萝卜皮</p>
+				<img src="img/1575264174691.jpg" width="300" height="220">
+				<p>肉夹馍</p>
+				
 			</div>
 		</div>
 	
 	</div>
 </div>
-
+ <script type="text/javascript">
+            var str="如果你热爱做饭且愿意分享，欢迎来梅斋分享你的美食！";
+          
+            var len=str.length;
+            var i=1;
+            function showword(){
+                document.getElementById("show").innerHTML=str.substr(0,i);
+                i++;
+                if(i>len){
+                clearInterval("done");
+                }
+            }
+            var done=setInterval("showword()",500);
+        </script>
 </body>
 </html>

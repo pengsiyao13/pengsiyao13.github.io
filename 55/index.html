@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+        <style type="text/css">
+            #show{width:100%px;height:1000px;
+            text-align: center;
+            background-color: lightblue;}
+        </style>
+    </head>
+    <body>
+        <div id="show">
+        	
+        </div>
+        <script type="text/javascript">
+            var str="你是不是想体验自己下厨的快乐？你是不是想提高自己的厨艺？梅斋可以满足你的所有需求。";
+          
+            var len=str.length;
+            var i=1;
+            function showword(){
+                document.getElementById("show").innerHTML=str.substr(0,i);
+                i++;
+                if(i>len){
+                clearInterval("done");
+                }
+            }
+            var done=setInterval("showword()",500);
+        </script>
+    </body>
+</html>

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+
 <html lang="en">
 	<head>
+		
 			
 <link rel="stylesheet" href="css/style.css">
 
@@ -207,7 +209,7 @@ background: white;
 				}
 			.box2 li:hover{
 				background-color:  saddlebrown;
-				margin: 2px;
+				margin: 3px;
 			}	
 			
 			.box3{
@@ -345,6 +347,24 @@ background: white;
 				border-radius: 18px;
 				text-align: center;
 			}
+			.box12 button{
+				width: 100%;
+				height: 40px;
+				background-color: saddlebrown;
+				border: 1px solid;
+			}
+			.box13 button{
+				width: 100%;
+				height: 40px;
+				background-color: saddlebrown;
+				border: 1px solid;
+			}
+			.box14 button{
+				width: 70px;
+				height: 40px;
+				background-color: saddlebrown;
+				border: 1px solid;
+			}
 			.box13{
 				width: 40%;
 				height: 300px;
@@ -364,7 +384,7 @@ background: white;
 			
 			.box14{
 				width: 100%;
-				height: 300px;
+				height: 320px;
 				background-color:;
 				float: right;
 			text-align: center;
@@ -372,6 +392,7 @@ background: white;
 				
 				
 			}
+			
 			
 			
 			.box15{
@@ -404,7 +425,9 @@ background: white;
 				border-radius:12px ;
 				margin-right: 100px;
 				margin-top: 40px;
+			}
 			
+
 		</style>
 			
 	</head>
@@ -423,15 +446,17 @@ background: white;
 				<li></li>
 				<li></li>
 				<li></li>
-				<li></li>
-				<a href="page2.html" target="_blank" style="text-decoration: none; color: #000000; width: 70px;height: 40px; border: 1px black solid;">登录</a>
 				
+			
 				<i class="fa fa-user-circle" style="font-size:24px; color: #000000;"></i>
 				
 				<i class="fa fa-qq" style="font-size:24px; color: #F25D8E;"></i>
 				<i class="fa fa-wechat" style="font-size:24px; color: lime;" ></i>
 				<i class="fa fa-weibo" style="font-size:24px; color: #F91616;"></i>
 				
+
+
+
 				
 				
 			</div>
@@ -444,8 +469,8 @@ background: white;
 		<div class="x">
 		<div class="box2">
 			<li><a href="#">首页</a></li>
-			<li><a href="page1.html" target="_blank">成果展示</a></li>
-			<li><a href="page3.html" target="_blank">个人中心</a></li>
+			<li><a href="page4.html" target="_blank">成果展示</a></li>
+			<li><a href="page5.html" target="_blank">个人中心</a></li>
 			<li><a href="iinner.html" target="_blank">策划书</a></li>
 		</div>
        <div class="box3">
@@ -539,7 +564,8 @@ background: white;
 			<img src="img/19_38_55_3E7D5E5F.jpg" width="100%" height="100px" />
 			<div class="box11" id="t3">
 				<div class="box12">
-					<h2>冰箱寄存服务<button>点此预约</button></h2>
+					<h2>冰箱寄存服务</h2>
+					<button>点此预约</button>
 					<br />
 					<br />
 					<p>若你有需要存储的剩菜，你可以预约冰箱寄存服务，</p>
@@ -551,21 +577,24 @@ background: white;
 				<div class="box13">
 					<strong >人事招聘</strong>
 					<br />
+					<button>加入我们</button>
+					<br />
 					<p>经理招聘：1人，5000元/月（主要负责协助管理店中事务）</p>
 					<br />
 					<p>财务管理人员：3人，4000元/月（主要负责核算店中支出，收益，以及制定价格）</p>
 					<br />
 					<p>宣传人员：3人，4000元/月（主要负责对店在线上线下进行宣传工作）</p>
 					<br />
-					<p>后勤人员：3人，4000元/月（主要负责管理店中后勤相关事务）</p>
-					<br />
+					
+					
 					<p>厨师：4人，5000元/月（主要负责厨师预约服务项目）</p>
 					
 					
 					
 			</div>
 				<div class="box12">
-					<h2>厨师服务<button>点此预约</button></h2>
+					<h2>厨师服务</h2>
+					<button>点此预约</button>
 					<br />
 					<br />
 					<p>如果你所做的菜品太困难太多需要帮助，或者你想学习做菜需要指导，</p>
@@ -578,10 +607,11 @@ background: white;
 				</div>
 			<div class="box14" id="t4">
 				
-				<h2>调查问卷填写<a href="diaocha.html" style="text-decoration: none;color: #000000; " target="_blank"><i class="fa fa-angle-double-right" style="font-size:36px"></i></a></h2>
+				<h2>调查问卷填写<a href="diaocha.html" style="text-decoration: none;color: #000000;" target="_blank"><i class="fa fa-angle-double-right" style="font-size:36px ;color: saddlebrown;"></i></a></h2>
 				
 				<input   type="text" style="width: 80%; height: 250px; border: 1px  saddlebrown solid;" placeholder="填写关于对此页面的意见，以及对店铺的看法....."/>
-				
+				<br />
+				<button type="submit">提交</button>
 			</div>	
 				
 		</div>
@@ -708,7 +738,14 @@ goindex();
 })
 
 }
+var modal = document.getElementById('id01');
 
+// 鼠标点击模型外区域关闭登录框
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 </script>
 
 

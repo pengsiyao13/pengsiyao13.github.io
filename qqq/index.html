@@ -1,348 +1,152 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-<title>js轮播图</title>
-
-<style type="text/css">
-
-*{
-
-margin: 0;
-
-padding: 0;
-
-}
-
-#content-1{
-
-position: relative;
-
-width: 70%;
-
-height: 600px;
-
-background: red;
-
-left: 300px;
-
-}
-
-.ul-1{
-
-width: 100%;
-
-height: 600px;
-
-position: relative;
-
-list-style: none;
-
-}
-
-.li-1{
-
-width: 100%;
-
-height: 100%;
-
-position: absolute;
-
-color: white;
-
-font-size: 70px;
-
-opacity: 0;
-
-transition: all .5s;
-
-}
-
-.li-1:nth-child(1){
-
-background: rgb(251, 255, 3);
-
-}
-
-.li-1:nth-child(2){
-
-background: rgb(7, 242, 250);
-
-}
-
-.li-1:nth-child(3){
-
-background:palevioletred;
-
-}
-
-.li-1:nth-child(4){
-
-background:rgb(243, 6, 85);
-
-}
-
-.li-1:nth-child(5){
-
-background:rgb(9, 247, 68);
-
-}
-
-.button_big{
-
-width: 40px;
-
-height: 80px;
-
-background: white;
-
-font-size: 30px;
-
-position: absolute;
-
-top: 250px;
-
-border: 0;
-
-z-index: 999;
-
-}
-
-#btn-pre{
-
-left: 20px;
-
-}
-
-#btn-next{
-
-right: 20px;
-
-}
-
-.li-1.active{
-
-z-index: 888;
-
-opacity:1;
-
-}
-
-/*五个圆圈*/
-
-#ul-2{
-
-position: absolute;
-
-top:80%;
-
-left: 36%;
-
-z-index: 1000;
-
-list-style: none;
-
-}
-
-.circle{
-
-width: 12px;
-
-height: 12px;
-
-margin-left: 20px;
-
-float: left;
-
-border: 3px solid white;
-
-border-radius: 100%;
-
-background: rgb(112, 110, 111);
-
-cursor: pointer;
-
-}
-
-.circle.styles{
-
-background: white;
-
-}
-
-</style>
-
-</head>
-
-<body>
-
- 
-
-<div id="content-1">
-
-<ul class="ul-1"><!--图片区域-->
-
-<li class="li-1 active" >0</li>
-
-<li class="li-1" >1</li>
-
-<li class="li-1" >2</li>
-
-<li class="li-1" >3</li>
-
-<li class="li-1" >4</li>
-
-</ul>
-
-<button type="button" class="button_big" id="btn-pre"><</button>
-
-<button type="button" class="button_big" id="btn-next">></button>
-
-<ul id="ul-2"><!--小圈圈区域-->
-
-<li class="circle styles" data-index="0"></li>
-
-<li class="circle" data-index="1"></li>
-
-<li class="circle" data-index="2"></li>
-
-<li class="circle" data-index="3"></li>
-
-<li class="circle" data-index="4"></li>
-
-</ul>
-
-</div>
-
-
- 
-
-<script type="text/javascript">
-
-var li = document.getElementsByClassName("li-1");//图片
-
-var pre = document.getElementById("btn-pre");//按钮
-
-var next = document.getElementById("btn-next");
-
-var circles = document.getElementsByClassName("circle");//获取圆圈
-
-var index = 0;
-
-//清空样式
-
-function clearli(){
-
-for(var i = 0;i<li.length;i++){
-
-li[i].className = "li-1";
-
-circles[i].className = "circle";
-
-}
-
-}
-
-//添加样式
-
-function goindex(){
-
-clearli();
-
-li[index].className = "li-1 active";
-
-circles[index].className = "circle styles";
-
-}
-
-//返回上一张图片
-
-function gopre(){
-
-if(index==0){
-
-index=4;
-
-}
-
-else{
-
-index--;
-
-}
-
-goindex();
-
-}
-
-//加click事件，执行gopre函数
-
-pre.addEventListener("click",function(){
-
-gopre();
-
-})
-
-//进入下一张图片
-
-function gonext(){
-
-if(index==4){
-
-index=0;
-
-}
-
-else{
-
-index++;
-
-}
-
-goindex();
-
-}
-
-//加click事件，执行gonext函数
-
-next.addEventListener("click",function(){
-
-gonext();
-
-})
-
-//小圆圈的样式和图片切换
-
-for(a=0;a<circles.length;a++){
-
-circles[a].addEventListener("click",function(){
-
-var data_index = this.getAttribute("data-index");
-
-index = data_index;
-
-goindex();
-
-})
-
-}
-
-</script>
-
-</body>
-
-</html>                                    
-                    
-    
-     
-        
-                        
-                
+<br><!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style type="text/css">
+            #box{
+                width: 730px;
+                height: 450px;
+                position: relative;
+                left: 20%;
+            }
+            #loop{
+                width: 100%;
+                height: 100%;
+            }
+            #loop img{
+                width: 100%;
+                height: 100%;
+            }
+            ul{
+                height: 50px;
+                position: absolute;
+                left: 20%;
+                bottom: 0;
+                list-style: none;
+            }
+            li{
+                float: left;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: #CCCCCC;
+                margin-left: 15px;
+                text-align: center;
+                line-height: 50px;
+                cursor: pointer;
+            }
+            .next{
+                width: 25px;
+                height: 48px;
+                opacity: .8;
+                border-bottom-left-radius: 5px;
+                border-top-left-radius: 5px;
+                background: url(img/swit.png);
+                background-position: -56px -5px !important;
+                position: absolute;
+                top: 40%;
+                right: 0;
+                cursor: pointer;
+            }
+            .prev{
+                width: 25px;
+                height: 48px;
+                opacity: .8;
+                background: url(img/swit.png);
+                background-position: -4px -5px !important;
+                border-bottom-right-radius: 5px;
+                border-top-right-radius: 5px;
+                position: absolute;
+                left: 0;
+                top: 40%;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div id="loop">
+                <img src="img/img/images/1.jpg" alt="" id="img"/>
+            </div>
+            <ul id="circle">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ul>
+            <div class="next">></div>
+            <div class="prev"><</div>
+        </div>
+        <script type="text/javascript">
+            var img = document.getElementById("img");     // 定义轮播图
+            var list = document.getElementById("circle").getElementsByTagName("li"); //定义所有的导航标
+            var index = 0;                          
+            list[index].style.background = 'red';   //使第一个导航的背景为红色
+            //制作一个定时器
+            var timer = setInterval(fun,1000);
+            function fun(){                         
+                index++;                            //循环所有的导航
+                if(index == 6){                     //不间断循环
+                    index = 0;
+                }
+                img.src="img/img/images/2.jpg";      //改变图片src值 这里因为我的图片就是从0~5命名的(为了方便下面操作) 有需要可以拼接字符串
+                back();                                 //使所有的导航背景回到初始值
+                list[index].style.background = 'red';   //使当前的导航背景为红色
+            }
+            //通过一个for循环实现鼠标移入移出改变导航背景和图片的src值
+            for(var i = 0; i<list.length; i++){          
+                list[i].onmouseover = function(){       //鼠标移入触发函数
+                    back();                             //先使所有的导航背景回到初始值
+                    this.style.background = 'red';      //给当前鼠标移入的导航背景替换颜色(这里的this可以输出一下看看是什么，对下面会好理解)
+                    clearInterval(timer);               //清除定时器
+                    index = this.innerHTML-1;           //因为img是从 0~5命名的  导航内容是1~6所以减一 
+                    img.src = "img/img/images/3.jpg";      
+                     
+                }
+                list[i].onmouseout = function(){        //鼠标移出触发函数重新开启定时器
+                    timer = setInterval(fun,1000);
+                }
+            }
+            //使所有的导航背景回到初始值 
+            function back(){                            
+                for(var j=0; j<list.length; j++){
+                    list[j].style.background = '#ccc';
+                }
+            }
+            //制作左右点击触发跳转事件
+            var next = document.getElementsByClassName("next")[0];  //定义下一页
+            var prev = document.getElementsByClassName("prev")[0];  //定义上一页
+            next.onclick = function nex(){                          //下一页点击触发效果 
+                index = index+1;                                    //index加1即可     
+                if(index == 6){                                     
+                    index = 0;
+                }
+                img.src = "img/img/images/4.jpg";
+                clearInterval(timer);                   
+                back()
+                list[index].style.background = 'red';
+            }
+            prev.onclick = function pre(){                          //下一页点击触发效果 
+                index = index-1;                                    //index减1即可             
+                if(index == -1){
+                    index = 5;
+                }
+                img.src = "img/img/images/5.jpg";
+                clearInterval(timer);
+                back()
+                list[index].style.background = 'red';
+            }
+            next.onmouseout = function(){                           //鼠标移出事件 继续滚动
+                clearInterval(timer);
+                timer = setInterval(fun,1000); 
+            }
+            prev.onmouseout = function(){
+                clearInterval(timer);
+                timer = setInterval(fun,1000); 
+            }
+        </script>
+    </body>
+</html>
